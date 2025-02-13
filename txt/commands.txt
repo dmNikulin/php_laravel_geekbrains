@@ -1,0 +1,23 @@
+
+composer create-project laravel/laravel example-app - установка фреймворка
+composer install --ignore-platform-reqs - проблема с пакетами
+php artisan serve - запуск сервера
+php artisan key:generate
+php artisan config:clear - сброс кэша после редактирование .env
+
+825 строчку из app\vendor\laravel\framework\src\Illuminate\Database\Connection.php
+комментим
+
+
+ОШИБКА 419
+
+Реоптимизация класса loader:
+php artisan optimize
+Очистка кэша фасада:
+php artisan cache:clear
+Очистка кэша роутов:
+php artisan route:cache
+Очистка кэша view:
+php artisan view:clear
+Очистка кэша конфигов:
+php artisan config:cache
