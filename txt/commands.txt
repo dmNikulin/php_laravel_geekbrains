@@ -1,9 +1,17 @@
 
-composer create-project laravel/laravel example-app - установка фреймворка
+composer self-update
+
+composer create-project laravel/laravel . - установка фреймворка
+
 composer install --ignore-platform-reqs - проблема с пакетами
-php artisan serve - запуск сервера
+composer update --ignore-platform-reqs - проблема с пакетами
 php artisan key:generate
+
+php artisan serve - запуск сервера
 php artisan config:clear - сброс кэша после редактирование .env
+
+Проблема с подключением к базе данных при старте проекта в файле .env
+SESSION_DRIVER=file ВМЕСТО SESSION_DRIVER=database
 
 825 строчку из app\vendor\laravel\framework\src\Illuminate\Database\Connection.php
 комментим
