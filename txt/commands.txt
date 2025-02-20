@@ -12,12 +12,14 @@ php artisan config:clear - сброс кэша после редактирова
 
 Проблема с подключением к базе данных при старте проекта в файле .env
 SESSION_DRIVER=file ВМЕСТО SESSION_DRIVER=database
-
+или
 825 строчку из app\vendor\laravel\framework\src\Illuminate\Database\Connection.php
 комментим
 
 
 ОШИБКА 419
+
+Можно вписать url исключение в класс middleware -> verifycsrftoken
 
 Реоптимизация класса loader:
 php artisan optimize
