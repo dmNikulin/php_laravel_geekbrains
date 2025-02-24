@@ -19,7 +19,7 @@ SESSION_DRIVER=file ВМЕСТО SESSION_DRIVER=database
 
 ОШИБКА 419
 
-Можно вписать url исключение в класс middleware -> verifycsrftoken
+Можно вписать url исключение в класс vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken.php
 
 Реоптимизация класса loader:
 php artisan optimize
@@ -31,3 +31,8 @@ php artisan route:cache
 php artisan view:clear
 Очистка кэша конфигов:
 php artisan config:cache
+
+
+__________________________
+ php artisan make: model Book -mfsc - модель с файлом миграции
+php artisam migrate - синхронизазия с бд
