@@ -1,5 +1,13 @@
 
+
 composer self-update
+
+Надо установить модуль ext-fileinfo, откройте php.ini и замените
+;extension=fileinfo
+на
+extension=fileinfo
+
+По идее остальные ошибки должны уйти, если нет, то смотрите какие зависимости требуются и откатывайте/обновляйте пакеты до требуемых версий.
 
 composer create-project laravel/laravel . - установка фреймворка
 
@@ -43,3 +51,7 @@ DB_PORT=3306
 DB_DATABASE=books
 DB_USERNAME=root
 DB_PASSWORD=
+
+php artisan make:migration put_field_isadmin --table=users
+
+установка breeze: https://laravel.su/docs/11.x/starter-kits
